@@ -47,13 +47,21 @@ footer .atencion span, footer .atencion div
 footer .atencion span
 {
 	color: orange;
-	font-size: 26px;
-	margin-left: 1em;
+	font-size: 18px;
+	margin: 0.3em 0.5em;
 }
 
-footer .atencion span:before
+footer .atencion #movil:before
 {
 	content: "\e602";
+	color: white;
+	font-family: 'icomoon';
+	margin-right: 5px;
+}
+
+footer .atencion #email:before
+{
+	content: "\e607";
 	color: white;
 	font-family: 'icomoon';
 	margin-right: 5px;
