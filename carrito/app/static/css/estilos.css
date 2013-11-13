@@ -151,6 +151,7 @@ nav .menu li a:hover
 .items
 {
 	padding: 0.5em;
+	margin: 0.5em auto;
 }
 
 .items .item
@@ -159,7 +160,7 @@ nav .menu li a:hover
 	background: #eee;
 	border-bottom: 1px solid #4DB5DD;
 	margin: 0.2em 0.1em;
-	width: 350px;
+	width: 320px;
 }
 
 .items .item div
@@ -196,7 +197,7 @@ nav .menu li a:hover
 .items .item .datos_item .titulo_item
 {
 	margin: 0.2em 0;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .items .item .datos_item .categoria_item
