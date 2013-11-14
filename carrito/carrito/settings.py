@@ -3,6 +3,9 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+from unipath import Path
+RUTA_PROYECTO = Path(__file__).ancestor(2)
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -50,7 +53,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = RUTA_PROYECTO.child('media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -108,6 +111,7 @@ ROOT_URLCONF = 'carrito.urls'
 WSGI_APPLICATION = 'carrito.wsgi.application'
 
 TEMPLATE_DIRS = (
+    RUTA_PROYECTO.child('templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -120,7 +124,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
+    'apps.catalogo',
+    'apps.home',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
