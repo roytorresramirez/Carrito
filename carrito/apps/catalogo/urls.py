@@ -8,5 +8,6 @@ from .views import catalogo
 urlpatterns = patterns('',
     # Examples:
     url(r'^catalogo/$', catalogo.as_view() ),
+    url(r'(?P<slug>[/w/]+)/$', )
 
 )
